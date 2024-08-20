@@ -4,12 +4,24 @@ description: 'Deploy your personalized AI chatbot in under 5 minutes'
 ---
 
 ## Two lines of code
-<Note>We provide a white-glove service to help you deploy. Interested? Just reach out <a href="mailto@support@appliedlabs.ai">here</a></Note>
+<Note>We provide a white-glove service to help you deploy. <a href="mailto@support@appliedlabs.ai">Just reach out.</a></Note>
 Add the following two lines of code to your HTML, Next.js, React, or any web framework of your choice to render the chat. 
-```tsx
-<Script src="https://appliedlabs.ai/cdn/applied-chat.umd.js" />
-<applied-chat agent-id={agentId}/>
-```
+
+<Steps>
+  <Step title="Script">
+    Add the script to your app
+    ```tsx
+    <script src="https://appliedlabs.ai/cdn/applied-chat.umd.js" />
+    ```
+  </Step>
+  <Step title="Component">
+    Add the component to the page or layout you want it displayed on
+    ```tsx
+    <applied-chat agent-id={agentId}/>
+    ```
+  </Step>
+</Steps>
+
 
 ## Setting user details
 We aggregate conversations and tag based on the passed in user ID. Addtionally, metadata fields such as `name`, `email`, `phone` are associated with the user.
