@@ -8,8 +8,8 @@
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#4f46e5",
-    "light": "#4f46e5",
-    "dark": "#818cf8",
+    "light": "#818cf8",
+    "dark": "#4f46e5",
     "anchors": {
       "from": "#818cf8",
       "to": "#4f46e5"
@@ -33,7 +33,7 @@
       "pages": [
         "introduction",
         "quickstart",
-        "development"
+        "faq"
       ]
     }
   ],
