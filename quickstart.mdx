@@ -5,7 +5,7 @@ description: 'Deploy your personalized AI chatbot in under 5 minutes'
 
 ## Two lines of code
 <Note>We provide a white-glove service to help you deploy. <a href="mailto@support@appliedlabs.ai">Just reach out.</a></Note>
-Add the following two lines of code to your HTML, Next.js, React, or any web framework of your choice to render the chat. 
+Add the following two lines of code to your HTML, Next.js, React, or any web framework of your choice. 
 
 <Steps>
   <Step title="Script">
@@ -29,15 +29,15 @@ We aggregate conversations and tag based on the passed in user ID. Addtionally, 
 <applied-chat 
   agent-id={agentId} 
   user-id={yourUserId}
-  metadata={{
+  metadata={JSON.stringify({
     name: "Alice", 
     email: "alice@wonderland.com",
     coins: 100,
     // any other fields you want
-  }}
+  })}
 />
 ```
-You can also change the metadata using
+You can also set the metadata using
 ```tsx
 window.applied.setMetadata({
   name: "Hatter",
