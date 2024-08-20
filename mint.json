@@ -40,5 +40,8 @@
   "footerSocials": {
     "x": "https://x.com/_appliedlabs",
     "linkedin": "https://www.linkedin.com/company/applied-labs-ai/"
+  },
+  "metadata": {
+    "og:image": "https://appliedlabs.ai/meta.jpg"
   }
 }
