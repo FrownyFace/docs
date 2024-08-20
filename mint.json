@@ -42,6 +42,6 @@
     "linkedin": "https://www.linkedin.com/company/applied-labs-ai/"
   },
   "metadata": {
-    "og:image": "/images/hero.jpg"
+    "og:image": "https://appliedlabs.ai/meta.jpg"
   }
 }
