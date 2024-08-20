@@ -7,12 +7,12 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#4f46e5",
+    "light": "#4f46e5",
+    "dark": "#6366f1",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#6366f1",
+      "to": "#4f46e5"
     }
   },
   "topbarLinks": [
@@ -22,8 +22,8 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Login",
-    "url": "https://appliedlabs.ai/login"
+    "name": "Get Started",
+    "url": "https://appliedlabs.ai/register"
   },
   "tabs": [],
   "anchors": [],
