@@ -10,13 +10,13 @@ Add the following two lines of code to your HTML, Next.js, React, or any web fra
 <Steps>
   <Step title="Script">
     Add the script to your app
-    ```tsx
-    <script src="https://appliedlabs.ai/cdn/applied-chat.umd.js" />
+    ```html
+    <script async src="https://appliedlabs.ai/cdn/applied-chat.umd.js"></script>
     ```
   </Step>
   <Step title="Component">
     Add the component to the page or layout you want it displayed on
-    ```tsx
+    ```html
     <applied-chat agent-id={agentId}/>
     ```
   </Step>
@@ -71,6 +71,20 @@ Style the parent container to be large and place it anywhere you want. We will r
 Applied Labs supports `light` and `dark` theme for both full page embed and chat popover
 ```tsx
 <applied-chat agent-id={agentId} theme="dark"/>
+```
+
+## Next.js example
+```tsx
+import Script from "next/script";
+
+export default function Page() {
+  return (
+    <div style="width: 100vw; height: 100vh;">
+      <Script src={"https://appliedlabs.ai/cdn/applied-chat.umd.js"} />
+      <applied-chat agent-id={agentId}/>
+    </div>
+  )
+}
 ```
 
 ## HTML example
