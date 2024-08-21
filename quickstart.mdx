@@ -48,8 +48,12 @@ window.applied.setMetadata({
 })
 ```
 
-## To hide and show the chat
-Call the hide and show functions
+## Visibility
+To mount the chat as a hidden component, use the `hide` attribute
+```tsx
+<applied-chat agent-id={agentId} hide/>
+```
+Call the hide and show functions to toggle chat visibility
 ```tsx
 window.applied.hide()
 window.applied.show()
