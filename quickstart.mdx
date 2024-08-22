@@ -24,7 +24,7 @@ Add the following two lines of code to your HTML, Next.js, React, or any web fra
 
 
 ## Setting user details
-We aggregate conversations and tag based on the passed in user ID. Additionally, metadata fields such as `name`, `email`, `phone` are associated with the user.
+We aggregate conversations and tag based on the passed in user ID. Additionally, metadata fields `name`, `email`, `phone` are associated with the user in addition to the conversation.
 ```tsx
 <applied-chat 
   agent-id={agentId} 
@@ -58,6 +58,18 @@ Call the hide and show functions to toggle chat visibility
 window.applied.hide()
 window.applied.show()
 ```
+
+## On message callback 
+To hook into user or agent messages for logging, use the `setOnMessage` method.
+```tsx
+window.applied.setOnMessage(
+  async (message: {text: string, role: "user" | "assistant"}) => {
+    await log(message);
+  }
+)
+```
+<Warning>Make sure that the `onMessage` function is async</Warning>
+
 
 ## Full page embed
 Style the parent container to be large and place it anywhere you want. We will render the chat inside the container.
