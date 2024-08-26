@@ -25,7 +25,7 @@ Add the following two lines of code to your HTML, Next.js, React, or any web fra
 
 ## Setting user details
 We aggregate conversations and tag based on the passed in user ID. Additionally, metadata fields `name`, `email`, `phone` are associated with the user in addition to the conversation.
-```tsx
+```typescript
 <applied-chat 
   agent-id={agentId} 
   user-id={yourUserId}
@@ -40,7 +40,7 @@ We aggregate conversations and tag based on the passed in user ID. Additionally,
 <Warning>Passing metadata directly into the component needs to be converted into a string.</Warning>
 
 You can also set the metadata using
-```tsx
+```typescript
 window.applied.setMetadata({
   name: "Hatter",
   email: "hatter@wonderland.com",
@@ -50,18 +50,18 @@ window.applied.setMetadata({
 
 ## Visibility
 To mount the chat as a hidden component, use the `hide` attribute
-```tsx
+```typescript
 <applied-chat agent-id={agentId} hide/>
 ```
 Call the hide and show functions to toggle chat visibility
-```tsx
+```typescript
 window.applied.hide()
 window.applied.show()
 ```
 
 ## On message callback 
 To hook into user or agent messages for logging, use the `setOnMessage` method.
-```tsx
+```typescript
 window.applied.setOnMessage(
   async (message: {text: string, role: "user" | "assistant"}) => {
     await log(message);
@@ -73,7 +73,7 @@ window.applied.setOnMessage(
 
 ## Full page embed
 Style the parent container to be large and place it anywhere you want. We will render the chat inside the container.
-```tsx
+```html
 <div style={{height: "100%", width: "100%"}}>
   <applied-chat agent-id={agentId} size="full"/>
 </div>
@@ -81,12 +81,24 @@ Style the parent container to be large and place it anywhere you want. We will r
 
 ## Themes
 Applied Labs supports `light` and `dark` theme for both full page embed and chat popover
-```tsx
+```html
 <applied-chat agent-id={agentId} theme="dark"/>
 ```
 
+## Typescript
+Typescript may yell at you for adding `<applied-chat>` as a component. To fix this, simply add the following snippet to the top of your file
+```typescript
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "applied-chat": any;
+    }
+  }
+}
+```
+
 ## Next.js example
-```tsx
+```typescript
 import Script from "next/script";
 
 export default function Page() {
